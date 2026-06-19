@@ -27,10 +27,10 @@ export const Route = createFileRoute("/")({
 });
 
 // ---- Config ----
-const WHATSAPP_NUMBER = "919999999999"; // TODO: replace with real WhatsApp number (country code + number, no +)
+const WHATSAPP_NUMBER = "917073456579"; // Founder: Dr. Sunil Machra (MBBS)
 const WHATSAPP_MESSAGE = `Hello 👋
 
-I am SUNIL MACHRA (MBBS), Founder & Mentor at Foundation Sarthi.
+I am Dr. Sunil Machra (MBBS), Founder & Mentor at Foundation Sarthi.
 
 I would be happy to personally guide you regarding your academic goals and arrange a FREE Demo Session & Personal Google Meet to understand your requirements and suggest the best learning plan.
 
@@ -78,6 +78,7 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <Founder />
         <About />
         <Courses />
         <WhyUs />
@@ -211,6 +212,40 @@ function Hero() {
               <div className="rounded-2xl bg-green-soft p-4">
                 <div className="text-sm font-semibold text-brand-green">By MBBS & IITians</div>
                 <div className="text-xs text-muted-foreground">Expert mentors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ---------------- Founder ----------------
+function Founder() {
+  return (
+    <section className="border-b border-border bg-background py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl bg-blue-soft ring-1 ring-border">
+          <div className="grid items-center gap-8 p-8 sm:p-10 lg:grid-cols-[160px_1fr]">
+            <div className="mx-auto lg:mx-0">
+              <div className="grid h-36 w-36 place-items-center rounded-full bg-brand-blue text-4xl font-bold text-white shadow-soft ring-4 ring-white">
+                Dr.SM
+              </div>
+            </div>
+            <div className="text-center lg:text-left">
+              <div className="text-xs font-semibold uppercase tracking-widest text-brand-green">Meet the Founder</div>
+              <h2 className="mt-2 text-2xl font-extrabold text-brand-blue sm:text-3xl">Dr. Sunil Machra (MBBS)</h2>
+              <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+                Dr. Sunil Machra is the Founder & Mentor at Foundation Sarthi. With a medical background and a passion for teaching, he personally guides every student to build strong academic foundations and achieve bright futures.
+              </p>
+              <div className="mt-5 flex flex-wrap justify-center gap-3 lg:justify-start">
+                <a href={whatsappLink} target="_blank" rel="noreferrer" className="rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95">
+                  Chat on WhatsApp
+                </a>
+                <a href="tel:+917073456579" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-blue ring-1 ring-border transition hover:bg-blue-soft">
+                  Call +91 70734 56579
+                </a>
               </div>
             </div>
           </div>
@@ -460,7 +495,7 @@ function Contact() {
         </form>
 
         <div className="space-y-5">
-          <InfoCard icon="📞" title="Phone" lines={["+91 99999 99999"]} />
+          <InfoCard icon="📞" title="Phone" lines={["+91 70734 56579"]} />
           <InfoCard icon="✉️" title="Email" lines={["hello@foundationsarthi.com"]} />
           <InfoCard icon="💬" title="WhatsApp" lines={["Chat with the founder directly"]} action={{ label: "Open WhatsApp", href: whatsappLink }} />
           <div className="overflow-hidden rounded-2xl ring-1 ring-border">
