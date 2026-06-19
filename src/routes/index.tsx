@@ -27,10 +27,10 @@ export const Route = createFileRoute("/")({
 });
 
 // ---- Config ----
-const WHATSAPP_NUMBER = "919999999999"; // TODO: replace with real WhatsApp number (country code + number, no +)
+const WHATSAPP_NUMBER = "917073456579"; // Founder: Dr. Sunil Machra (MBBS)
 const WHATSAPP_MESSAGE = `Hello 👋
 
-I am SUNIL MACHRA (MBBS), Founder & Mentor at Foundation Sarthi.
+I am Dr. Sunil Machra (MBBS), Founder & Mentor at Foundation Sarthi.
 
 I would be happy to personally guide you regarding your academic goals and arrange a FREE Demo Session & Personal Google Meet to understand your requirements and suggest the best learning plan.
 
@@ -460,7 +460,7 @@ function Contact() {
         </form>
 
         <div className="space-y-5">
-          <InfoCard icon="📞" title="Phone" lines={["+91 99999 99999"]} />
+          <InfoCard icon="📞" title="Phone" lines={["+91 70734 56579"]} />
           <InfoCard icon="✉️" title="Email" lines={["hello@foundationsarthi.com"]} />
           <InfoCard icon="💬" title="WhatsApp" lines={["Chat with the founder directly"]} action={{ label: "Open WhatsApp", href: whatsappLink }} />
           <div className="overflow-hidden rounded-2xl ring-1 ring-border">
