@@ -221,6 +221,40 @@ function Hero() {
   );
 }
 
+// ---------------- Founder ----------------
+function Founder() {
+  return (
+    <section className="border-b border-border bg-background py-16">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl bg-blue-soft ring-1 ring-border">
+          <div className="grid items-center gap-8 p-8 sm:p-10 lg:grid-cols-[160px_1fr]">
+            <div className="mx-auto lg:mx-0">
+              <div className="grid h-36 w-36 place-items-center rounded-full bg-brand-blue text-4xl font-bold text-white shadow-soft ring-4 ring-white">
+                Dr.SM
+              </div>
+            </div>
+            <div className="text-center lg:text-left">
+              <div className="text-xs font-semibold uppercase tracking-widest text-brand-green">Meet the Founder</div>
+              <h2 className="mt-2 text-2xl font-extrabold text-brand-blue sm:text-3xl">Dr. Sunil Machra (MBBS)</h2>
+              <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+                Dr. Sunil Machra is the Founder & Mentor at Foundation Sarthi. With a medical background and a passion for teaching, he personally guides every student to build strong academic foundations and achieve bright futures.
+              </p>
+              <div className="mt-5 flex flex-wrap justify-center gap-3 lg:justify-start">
+                <a href={whatsappLink} target="_blank" rel="noreferrer" className="rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95">
+                  Chat on WhatsApp
+                </a>
+                <a href="tel:+917073456579" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-blue ring-1 ring-border transition hover:bg-blue-soft">
+                  Call +91 70734 56579
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ---------------- Section wrapper ----------------
 function Section({ id, eyebrow, title, subtitle, children, tone = "white" }: {
   id?: string; eyebrow?: string; title: string; subtitle?: string; children: React.ReactNode; tone?: "white" | "blue" | "green";
