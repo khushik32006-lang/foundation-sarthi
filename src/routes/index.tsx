@@ -78,6 +78,7 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <Founder />
         <About />
         <Courses />
         <WhyUs />
