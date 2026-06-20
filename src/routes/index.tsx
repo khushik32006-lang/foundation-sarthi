@@ -501,15 +501,6 @@ function Contact() {
           <InfoCard icon="📞" title="Phone" lines={["+91 70734 56579"]} />
           <InfoCard icon="✉️" title="Email" lines={["hello@foundationsarthi.com"]} />
           <InfoCard icon="💬" title="WhatsApp" lines={["Chat with the founder directly"]} action={{ label: "Open WhatsApp", href: whatsappLink }} />
-          <div className="overflow-hidden rounded-2xl ring-1 ring-border">
-            <iframe
-              title="Foundation Sarthi location"
-              src="https://www.google.com/maps?q=India&output=embed"
-              className="h-64 w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </div>
       </div>
     </Section>
