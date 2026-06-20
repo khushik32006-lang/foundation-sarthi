@@ -50,6 +50,9 @@ Once I receive these details, I will personally connect with you and schedule a 
 
 Looking forward to helping you build a strong foundation for future success. 🚀`;
 
+const INSTAGRAM_URL = "https://www.instagram.com/foundation_sarthi_2026/?fbclid=IwY2xjawSjUZ5leHRuA2FlbQIxMQBicmlkETFtbWJmVEJvSDV3NGdxUWd3c3J0YwZhcHBfaWQBMAABHlyu7nbGCazh5jCWo1qPKO1HG_HCBxhcHndi40bQ58AfR3v2VsPcC67OWITc_aem_OvUUQyMxmHE6CwJaeYH4kQ";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61590612463080#";
+
 const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 // ---- Reveal-on-scroll helper ----
@@ -569,9 +572,9 @@ function Footer() {
           <div className="text-sm font-semibold">Connect</div>
           <ul className="mt-3 space-y-2 text-sm text-white/80">
             <li><a href={whatsappLink} target="_blank" rel="noreferrer" className="hover:text-white">WhatsApp</a></li>
-            <li><a href="#" className="hover:text-white">Instagram</a></li>
+            <li><a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-white">Instagram</a></li>
             <li><a href="#" className="hover:text-white">YouTube</a></li>
-            <li><a href="#" className="hover:text-white">Facebook</a></li>
+            <li><a href={FACEBOOK_URL} target="_blank" rel="noreferrer" className="hover:text-white">Facebook</a></li>
           </ul>
         </div>
       </div>
