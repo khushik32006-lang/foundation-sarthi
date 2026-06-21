@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 });
 
 // ---- Config ----
-const WHATSAPP_NUMBER = "917073456579"; // Founder: Dr. Sunil Machra (MBBS)
+const WHATSAPP_NUMBER = "917073356579"; // Founder: Dr. Sunil Machra (MBBS)
 const WHATSAPP_MESSAGE = `Hello 👋
 
 I am Dr. Sunil Machra (MBBS), Founder & Mentor at Foundation Sarthi.
@@ -249,8 +249,8 @@ function Founder() {
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="rounded-full bg-brand-green px-5 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:opacity-95">
                   Chat on WhatsApp
                 </a>
-                <a href="tel:+917073456579" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-blue ring-1 ring-border transition hover:bg-blue-soft">
-                  Call +91 70734 56579
+                <a href="tel:+917073356579" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-blue ring-1 ring-border transition hover:bg-blue-soft">
+                  Call +91 70733 56579
                 </a>
               </div>
             </div>
@@ -501,7 +501,7 @@ function Contact() {
         </form>
 
         <div className="space-y-5">
-          <InfoCard icon="📞" title="Phone" lines={["+91 70734 56579"]} />
+          <InfoCard icon="📞" title="Phone" lines={["+91 70733 56579"]} />
           <InfoCard icon="✉️" title="Email" lines={["hello@foundationsarthi.com"]} />
           <InfoCard icon="💬" title="WhatsApp" lines={["Chat with the founder directly"]} action={{ label: "Open WhatsApp", href: whatsappLink }} />
         </div>
