@@ -29,26 +29,8 @@ export const Route = createFileRoute("/")({
 
 // ---- Config ----
 const WHATSAPP_NUMBER = "917073356579"; // Founder: Dr. Sunil Machra (MBBS)
-const WHATSAPP_MESSAGE = `Hello 👋
+const WHATSAPP_MESSAGE = `Hi! Foundation Sarthi I want to book a free demo class for Class 9/10.`;
 
-I am Dr. Sunil Machra (MBBS), Founder & Mentor at Foundation Sarthi.
-
-I would be happy to personally guide you regarding your academic goals and arrange a FREE Demo Session & Personal Google Meet to understand your requirements and suggest the best learning plan.
-
-Kindly share the following details:
-
-📝  Information
-
-• Name:
-• Class:
-• Board (ICSE/CBSE):
-• Subject(s) Required:
-• Parent / Student:
-• Contact Number:
-
-Once I receive these details, I will personally connect with you and schedule a one-to-one guidance session.
-
-Looking forward to helping you build a strong foundation for future success. 🚀`;
 
 const INSTAGRAM_URL = "https://www.instagram.com/foundation_sarthi_2026/?fbclid=IwY2xjawSjUZ5leHRuA2FlbQIxMQBicmlkETFtbWJmVEJvSDV3NGdxUWd3c3J0YwZhcHBfaWQBMAABHlyu7nbGCazh5jCWo1qPKO1HG_HCBxhcHndi40bQ58AfR3v2VsPcC67OWITc_aem_OvUUQyMxmHE6CwJaeYH4kQ";
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61590612463080#";
