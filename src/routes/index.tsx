@@ -493,7 +493,7 @@ function Contact() {
               disabled={status === "sending"}
               className="mt-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:opacity-95 disabled:opacity-60"
             >
-              {status === "sending" ? "Sending..." : "Submit"}
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
             {status === "success" && <p className="text-sm text-brand-green">✅ Message sent successfully! We'll get back to you soon.</p>}
             {status === "error" && <p className="text-sm text-destructive">❌ Something went wrong. Please try again.</p>}
