@@ -437,13 +437,17 @@ function FAQ() {
 }
 
 // ---------------- Contact ----------------
+const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbymVpbzHH_yS_vo-psdOoVv3WMgCi0G1YUdNWFYvjTibSN4bOaQzTciTbkyBLqZrSdx/exec";
+
 function Contact() {
-  const [status, setStatus] = useState<"idle" | "ok" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
     const phone = String(data.get("phone") || "").trim();
@@ -456,10 +460,19 @@ function Contact() {
     setErrors(errs);
     if (Object.keys(errs).length) return;
 
-    const text = `Enquiry from ${name}%0APhone: ${phone}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
-    setStatus("ok");
-    (e.target as HTMLFormElement).reset();
+    setStatus("sending");
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, message }),
+      });
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -475,10 +488,15 @@ function Contact() {
               <textarea name="message" rows={4} maxLength={600} className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-brand-blue" placeholder="Tell us about your child's class, board and goals…" />
               {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
             </div>
-            <button type="submit" className="mt-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:opacity-95">
-              Send via WhatsApp
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="mt-2 rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:opacity-95 disabled:opacity-60"
+            >
+              {status === "sending" ? "Sending..." : "Submit"}
             </button>
-            {status === "ok" && <p className="text-sm text-brand-green">Opening WhatsApp… we'll get back to you soon!</p>}
+            {status === "success" && <p className="text-sm text-brand-green">✅ Message sent successfully! We'll get back to you soon.</p>}
+            {status === "error" && <p className="text-sm text-destructive">❌ Something went wrong. Please try again.</p>}
           </div>
         </form>
 
@@ -491,6 +509,7 @@ function Contact() {
     </Section>
   );
 }
+
 
 function Field({ label, name, type = "text", error }: { label: string; name: string; type?: string; error?: string }) {
   return (
