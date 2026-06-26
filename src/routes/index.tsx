@@ -502,7 +502,7 @@ function Contact() {
 
         <div className="space-y-5">
           <InfoCard icon="📞" title="Phone" lines={["+91 70733 56579"]} />
-          <InfoCard icon="✉️" title="Email" lines={["hello@foundationsarthi.com"]} />
+          <InfoCard icon="✉️" title="Email" lines={["foundationsarthi2026@gmail.com"]} />
           <InfoCard icon="💬" title="WhatsApp" lines={["Chat with the founder directly"]} action={{ label: "Open WhatsApp", href: whatsappLink }} />
         </div>
       </div>
